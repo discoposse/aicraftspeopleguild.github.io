@@ -503,13 +503,13 @@
             <p>
                 The point is not to sound clever. The point is to reduce drift, surface assumptions, improve verification, and keep human judgement active. Prompting without ritual easily turns into vague delegation. Prompting with ritual keeps the craftsperson in the loop.
             </p>
-            <p>Here are six seed rituals offered by <a href="https://aicraftspeopleguild.github.io/alex-bunardzic.html">Alex Bunardzic</a>; treat those as starting points giving you hints on how to build for your own rituals.</p>
+            <p>Here are the first seven rituals in the archive. The initial seed set came from <a href="alex-bunardzic.html">Alex Bunardzic</a>, and the archive now grows through member contribution, including Ritual 07 from <a href="kelly-hohman.html">Kelly Hohman</a>.</p>
         </section>
 
         <section class="rituals-shell">
             <div class="section-heading">
                 <h2>Starter Rituals</h2>
-                <p>The first six rituals in the Guild archive. This list is expected to grow as members contribute their working practices.</p>
+                <p>The first seven rituals in the Guild archive. This list is expected to grow as members contribute their working practices.</p>
             </div>
 
             <div class="rituals-grid">
@@ -610,6 +610,39 @@ Do not merge the two passes.</code>
 2. how to verify it
 3. what remains uncertain
 4. what a human must still check</code>
+                    </div>
+                </article>
+
+                <article class="ritual-card">
+                    <div class="ritual-number">Ritual 07</div>
+                    <h3>Constraint First Generation</h3>
+                    <p>
+                        <strong>Submitted by <a href="kelly-hohman.html">Kelly Hohman</a>.</strong> This ritual starts by forcing the model back to the actual problem boundary before it races into oversized solutions.
+                    </p>
+                    <p>
+                        <strong>Intent:</strong> Reduce scope creep and prevent AI from over-engineering beyond requirements.
+                    </p>
+                    <p>
+                        <strong>Trigger:</strong> Use it when AI starts proposing solutions that exceed the original problem scope.
+                    </p>
+                    <p>
+                        <strong>Evidence:</strong> It prevents AI from building castles when the user asked for a shed - a common failure mode where helpfulness becomes harmful.
+                    </p>
+                    <p>
+                        <strong>Failure mode:</strong> Under-delivering or missing opportunities for elegant solutions.
+                    </p>
+                    <div class="ritual-prompt">
+                        <strong>Prompt pattern</strong>
+                        <code>"Stop. What problem are we actually solving?"
+"What is the minimum viable solution?"
+"What would make this fail (complexity, performance, maintenance)?"
+"Now propose the simplest version that meets core requirements"
+"Only after approval, discuss enhancements"</code>
+                    </div>
+                    <div class="ritual-prompt">
+                        <strong>Example in practice</strong>
+                        <code>User: "I need a way to sort these records"
+AI: "Stop. What problem are we actually solving? Just sorting? What's the minimum viable solution? A simple sort function? What would make this fail - wrong data types? Now propose the simplest version that meets core requirements."</code>
                     </div>
                 </article>
             </div>
