@@ -306,6 +306,18 @@
             background: var(--color-highlight);
         }
 
+        .future-slot-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .future-slot-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px var(--color-shadow);
+        }
+
         .future-slot h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.25rem;
@@ -511,14 +523,14 @@
         <section class="future-panel">
             <div class="section-heading">
                 <h2>Future Entries</h2>
-                <p>Reserved space for future examples worth recognizing.</p>
+                <p>The product slot is now live. Additional service and course entries remain open for future Guild recognition.</p>
             </div>
 
             <div class="future-grid">
-                <div class="future-slot">
-                    <h3>Product Slot</h3>
-                    <p>Reserved for a product that demonstrates unusual quality and user respect.</p>
-                </div>
+                <a href="hushbell.html" class="future-slot future-slot-link">
+                    <h3>HUSHBELL</h3>
+                    <p>The doorbell dogs can't hear: a humane product concept built around minimizing startle while still alerting the human.</p>
+                </a>
                 <div class="future-slot">
                     <h3>Service Slot</h3>
                     <p>Reserved for a service that consistently delivers substance over hype.</p>
